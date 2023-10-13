@@ -1,0 +1,44 @@
+/* スタイルの一部を定義 */
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+.search-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#food-search {
+    padding: 5px;
+    font-size: 16px;
+}
+
+#search-button {
+    padding: 5px 10px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.food-results {
+    margin: 20px 0;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 5px 0;
+}
+
+.calorie-chart {
+    text-align: center;
+}

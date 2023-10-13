@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>カロリー計算アプリ</title>
+</head>
+<body>
+    <h1>カロリー計算アプリ</h1>
+    
+    <!-- 食品検索フォーム -->
+    <div class="search-container">
+        <label for="food-search">食品を検索：</label>
+        <input type="text" id="food-search" placeholder="食品名を入力">
+        <button id="search-button">検索</button>
+    </div>
+    
+    <!-- 食品結果表示 -->
+    <div class="food-results">
+        <h2>食品のカロリー</h2>
+        <ul id="food-list"></ul>
+        <p id="total-calories">合計カロリー：0</p>
+    </div>
+
+    <!-- カロリーグラフ -->
+    <div class="calorie-chart">
+        <h2>週間カロリー摂取量</h2>
+        <canvas id="calorie-chart"></canvas>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
