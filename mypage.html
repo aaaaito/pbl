@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: content: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+    <script src="components/loader.js"></script>
+    <link rel="stylesheet" href="components/loader.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        //APIキーの設定
+        var applicationKey = "b4058803aeafdd1783199eb81a63474169c27f51df7f18ca4147e1d5f6d54669";
+        var clientKey = "9348fd5f9e15c9e7fbd34b19a6dfe31cf2344b77f02845ca8b03277e053e1c0f";
+        //SDKの初期化
+        var ncmb = new NCMB(applicationKey, clientKey);
+    </script>
+</head>
+<body>
+   <!--ヘッダー-->
+    <h2>calori-mart</h2>
+   <!--ヘッダー終了-->
+    
+    <!--メイン-->
+    <!-- カロリーグラフ -->
+    <div class="calorie-chart">
+        <h2>週間カロリー摂取量</h2>
+        <canvas id="calorie-chart"></canvas>
+    </div>
+
+    <!--メイン終了-->
+
+    <!--フッター-->
+    <nav id = "nav-menu" >
+        <ul>
+            <li><a href="index.html" class="menu home">ホーム</a></li>
+            <li><a href="index.html" class="menu kiroku">日々の記録</a></li>
+            <li><a src="../img/kcal1.png"class="menu kalori"></a></li>
+            <li><a href="search.html" class="menu search">検索</a></li>
+            <li><a href="mypage.html" class="menu mypage">マイページ</a></li>
+        </ul>
+    </nav>
+    <!--フッター終了-->
+</body>
+</html>

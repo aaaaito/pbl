@@ -6,9 +6,8 @@ const foodDatabase = [
     // 他の食品データ
 ];
 
-const foodList = document.getElementById("food-list");
-const totalCalories = document.getElementById("total-calories");
-const searchButton = document.getElementById("search-button");
+// 選択した食品の配列を保持する変数
+const selectedFoods = [];
 
 searchButton.addEventListener("click", searchFood);
 
@@ -19,11 +18,34 @@ function searchFood() {
     if (foundFood) {
         // 食品をリストに追加
         const listItem = document.createElement("li");
+
+        // ラジオボタンを作成
+        const radioBtn = document.createElement("input");
+        radioBtn.type = "radio";
+        radioBtn.name = "food-choice";
+        radioBtn.value = foundFood.name;
+        listItem.appendChild(radioBtn);
+
+        // 食品情報を表示
         listItem.textContent = `${foundFood.name}: ${foundFood.calories} カロリー`;
         foodList.appendChild(listItem);
 
         // カロリーの合計を更新
         updateTotalCalories();
+
+        // ラジオボタンが選択されたときのイベントリスナーを追加
+        radioBtn.addEventListener("change", () => {
+            if (radioBtn.checked) {
+                // ラジオボタンが選択されたときに選択した食品を配列に追加
+                selectedFoods.push(foundFood);
+            } else {
+                // ラジオボタンが選択解除されたときに選択した食品を配列から削除
+                const index = selectedFoods.indexOf(foundFood);
+                if (index !== -1) {
+                    selectedFoods.splice(index, 1);
+                }
+            }
+        });
     } else {
         // エラーメッセージを表示
         alert("該当する食品が見つかりません。");
@@ -43,3 +65,4 @@ function updateTotalCalories() {
 }
 
 // グラフ表示のコードはChart.jsなどのライブラリを使用して実装
+
