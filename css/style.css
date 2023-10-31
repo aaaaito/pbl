@@ -1,0 +1,342 @@
+/*全体への役割*/
+body {
+  font-family: Arial, sans-serif;
+}
+
+/*ヘッダーのcss*/
+#rogo {
+  text-align: center;
+  border-bottom:1px solid#000;
+  padding-bottom: 20px;
+}
+#rogo img{
+  width: 35px;/*index.htmlのヘッダー画像の大きさ*/
+}
+
+/*index.html*/
+
+/*広告のcss*/
+.ad {
+overflow-x: scroll;
+-webkit-overflow-scrolling: touch;
+padding: 0 0 12px 8px;
+display: -ms-flexbox;
+display: flex; 
+list-style: none;
+}
+/*スクロールバーをなくす*/
+.ad::-webkit-scrollbar {
+width: 0;
+height: 0;
+}
+
+.cp img{
+  max-width: 100%;
+  height: auto;
+}
+
+.syo-name{
+  font-size: 15px;
+  text-align: center;
+}
+
+/* 画面幅が768px以上の場合、横スクロールを解除 */
+@media screen and (min-width: 768px) {
+.ad {
+  overflow-x: inherit;
+  padding: 0 8px 6px; 
+  } 
+}
+
+.ad > li {
+width: 100%;
+min-width: 140px; 
+}
+
+@media screen and (min-width: 768px) {
+.ad > li {
+  min-width: inherit; 
+  } 
+}
+
+.ad > li:not(:last-child) {
+margin-right: 5px;
+}
+
+.ad > li:last-child {
+padding-right: 5px; 
+}
+
+@media screen and (min-width: 768px) {
+.ad > li:last-child {
+  padding-right: 0; 
+  } 
+}
+
+.ad img {
+vertical-align: bottom;
+}
+/*広告cssここまで*/
+
+/*テーブル*/
+.underline {
+border-bottom: 1px solid #000;
+}
+
+/* テーブルのセルのスタイルを指定 */
+.userrecode {
+border: 1px solid #000;
+width: 65%; /* テーブルを幅いっぱいに広げる */
+border-collapse: collapse; /* セルのボーダーを統合 */
+margin-left: auto;
+margin-right: auto;
+}
+
+.userrecode th {
+  text-align: center;
+  padding: 20px;
+}
+
+.userrecode td {
+text-align: right;
+padding-right: 20px;
+padding-left: 35px;
+
+}
+
+.man{
+  border: 1px solid #000;
+}
+
+.man img{
+  width: 100%;
+}
+
+/*テーブルここまで*/
+
+
+/*フッターはここから*/
+
+/*メニューバー*/
+#nav-menu{
+  position: fixed; /*メニューをページ上部に固定*/
+  bottom: 0;/*下部に固定できるようにする*/
+  justify-content: space-between;/*等間隔に空白を置く*/
+  background-color: chartreuse;/*メニューバーの背景色*/
+  z-index: 9999;/*画面の一番前に持ってくる*/
+  
+}
+
+#nav-menu ul{
+  display: flex;/*メニューを横並びにする*/
+  justify-content: flex-start;/*メニューバーを左寄せにする*/
+  list-style: none;/*・をなくす*/
+  margin: 0;
+  padding: 0;
+}
+
+#nav-menu ul li{
+  width: 80px;/*メニューの文字の大きさ*/
+  text-align: center;/*文字をセンターにする*/
+  border-left: 1px solid #ccc;/*左に線を引く*/
+  border-top: 1px solid #ccc;/*上に線を引く*/
+}
+
+#nav-menu ul li:last-child{
+  border-right: 1px solid #ccc;/*右端に線を引く*/
+  border-top: 1px solid #ccc;/*上に線を引く*/
+}
+
+#nav-menu ul li .menu{
+  color: black;/*文字の色*/
+  text-decoration: none;/*文字に装飾をしない*/
+  display: block; /*ブロックにまとめる*/
+}
+
+#nav-menu ul li .menu::before{
+   content: '';
+   display: block;
+   margin: 0 auto 5px;
+   width: 48px; /*画像の範囲*/
+   height: 48px; /*画像の範囲*/
+   background-repeat: no-repeat;
+   background-size: contain;
+}
+
+#nav-menu ul li .home::before{
+   background: url(../img/home.png);/*画像のURL*/
+}
+
+#nav-menu ul li .kiroku::before{
+   background: url(../img/kiroku.png);/*画像のURL*/
+}
+
+#nav-menu ul li .kalori::before{
+   background: url(../img/kcal1.png);/*画像のURL*/
+}
+
+#nav-menu ul li .search::before{
+   background: url(../img/search.png);/*画像のURL*/
+}
+
+#nav-menu ul li .mypage::before{
+   background: url(../img/mypage.png);/*画像のURL*/
+}
+
+#nav-menu ul li .home:hover{
+  background: rgb(186, 187, 247);
+}
+
+#nav-menu ul li .kiroku:hover{
+  background: rgb(186, 187, 247);
+}
+
+#nav-menu ul li .search:hover{
+  background: rgb(186, 187, 247);
+}
+
+#nav-menu ul li .mypage:hover{
+  background: rgb(186, 187, 247);
+}
+
+/*index.html終了*/
+
+/*recode.html*/
+
+
+/*recode.html終了*/
+
+
+
+/*search.html*/
+
+/*カテゴリのcss*/
+.category {
+overflow-x: scroll;
+-webkit-overflow-scrolling: touch;
+padding: 0 0 12px 8px;
+display: -ms-flexbox;
+display: flex; 
+list-style: none;
+
+}
+/*スクロールバーをなくす*/
+.category::-webkit-scrollbar {
+width: 0;
+height: 0;
+}
+
+.category-name{
+  padding-right: 20px;
+}
+
+/* button */
+.category-name button {
+  padding: 5px 10px;
+  display: inline-block;
+  white-space: nowrap;
+  border: 1px solid #000;
+  border-radius: 0;
+  background: #fff;
+
+  -webkit-transform-style: preserve-3d;
+
+  transform-style: preserve-3d;
+}
+
+.category-name button:before {
+position: absolute;
+top: 0;
+left: 0;
+
+width: 5px;
+height: 100%;
+
+content: '';
+-webkit-transition: all .3s;
+transition: all .3s;
+
+background: #000;
+}
+
+.category-name button:hover {
+color: #fff;
+background: #000;
+}
+
+.category-name button:hover:before {
+background: #fff;
+}
+
+/* 検索欄 */
+.search-layout {
+  display: inline-block;
+  padding-left: 15px;
+}
+
+.search-menu {
+  display: inline-block;
+  list-style: none;
+  border: 1px solid #000;
+  width: 45%; /* 各要素の幅を調整 (4つの要素を横に並べたい場合) */
+  margin: 5px; /* 要素間のマージンを追加 */
+  vertical-align: top; /* 上揃え */
+}
+
+.search-menu-name{
+  padding-left: 5px;
+  text-align: left;
+}
+
+.search-menu p {
+  text-align: center; /* 中央揃え */
+}
+
+.search-menu img {
+  width: 100%;
+}
+
+
+
+
+
+/*search.html終了*/
+
+/*mypage.html開始*/
+.mypage-set {
+  font-size: 0;
+  border-bottom: 1px solid #000;
+}
+
+.mypage-set .username {
+  font-size: 30px;
+  vertical-align: middle; /* 垂直方向の中央揃え */
+  margin-left: 10px; /* アイコンとテキストの間に余白を追加 */
+}
+
+.mypage-hen {
+  margin-left: 90px;
+  margin-bottom: 20px;
+}
+
+.mypage-set img{
+  width: 70px;
+  vertical-align: middle; /* テキストを垂直方向に中央揃えに設定 */
+  padding-right: 10px;
+}
+
+.menu-mypage ul li{
+  list-style: none;
+  border-bottom:1px solid #000;
+  padding-left: 0%;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  font-size: 30px;
+}
+
+.mypage-icon img{
+  width: 50px;
+  padding-right: 10px;
+}
+
+/*mypage.html終了*/

@@ -7,6 +7,7 @@
     <script src="components/loader.js"></script>
     <link rel="stylesheet" href="components/loader.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/calendar.css">
     <script>
         //APIキーの設定
         var applicationKey = "b4058803aeafdd1783199eb81a63474169c27f51df7f18ca4147e1d5f6d54669";
@@ -17,61 +18,28 @@
 </head>
 <body>
    <!--ヘッダー-->
-    <h2 id="rogo">calori-mart</h2>
+    <h2 id="rogo">記録</h2>
    <!--ヘッダー終了-->
     
     <!--メイン-->
-    <ul class="ad">
-        <li>
-            <a href=""><img src=""></a>
-            <div>キャプション</div>
-        </li>
-        <li>
-            <a href=""><img src=""></a>
-            <div>キャプション</div>
-        </li>
-        <li>
-            <a href=""><img src=""></a>
-            <div>キャプション</div>
-        </li>
-        <li>
-            <a href=""><img src=""></a>
-            <div>キャプション</div>
-        </li>
-        <li>
-            <a href=""><img src=""></a>
-            <div>キャプション</div>
-        </li>
-        <li>
-            <a href=""><img src=""></a>
-            <div>キャプション</div>
-        </li>
-        <li>
-            <a href=""><img src=""></a>
-            <div>キャプション</div>
-        </li>
-    </ul>
+    <div class="wrapper">
+    <!-- xxxx年xx月を表示 -->
+    <h1 id="header"></h1>
 
-    <!-- 食品結果表示 -->
-    <div>
-        <table>
-            <tr class="underline">
-                <th colspan="2">ユーザー名の摂取カロリー</th>
-            </tr> 
-            <tr>
-                <th></th>
-                <td>残り：~~Kcal</td>
-            </tr>   
-            <tr>
-                <th>週間平均Kcal</th>
-                <td>~~Kcal</td>
-            </tr>
-            <tr>
-                <th>当日Kcal</th>
-                <td>~~Kcal</td>
-            </tr>
-        </table>
+    <!-- ボタンクリックで月移動 -->
+    <div id="next-prev-button">
+        <button id="prev" onclick="prev()">‹</button>
+        <button id="next" onclick="next()">›</button>
     </div>
+
+    <!-- カレンダー -->
+    <div id="calendar">
+        
+    </div>
+</div>
+
+   
+    
 
     <!--メイン終了-->
 
@@ -86,5 +54,6 @@
         </ul>
     </nav>
     <!--フッター終了-->
+    <script src="js/app.js"></script>
 </body>
 </html>
